@@ -13,9 +13,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{72409DA0-7CB2-47B3-B188-570F863D9CD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Domain.Core", "MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj", "{77165297-2982-461E-AD8B-A76AE5FEED21}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77165297-2982-461E-AD8B-A76AE5FEED21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77165297-2982-461E-AD8B-A76AE5FEED21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77165297-2982-461E-AD8B-A76AE5FEED21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77165297-2982-461E-AD8B-A76AE5FEED21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{77165297-2982-461E-AD8B-A76AE5FEED21} = {44476657-F133-4D2B-9B90-1983433A14E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265A3534-B192-4BCD-8039-63EC11F50D57}
