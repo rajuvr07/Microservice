@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice", "Microservice", "{FBA611C5-412B-4518-B3AA-DE3F6786E3A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{44476657-F133-4D2B-9B90-1983433A14E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Bus", "Infra.Bus", "{8DFBEB35-DE67-42E1-A3CC-9383305901C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{FFCE4DF3-0896-4B40-BA3C-287626DD6317}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{72409DA0-7CB2-47B3-B188-570F863D9CD4}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
