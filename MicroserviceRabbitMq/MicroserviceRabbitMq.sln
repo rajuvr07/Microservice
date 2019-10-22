@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.IoC", "Infra.IoC", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{72409DA0-7CB2-47B3-B188-570F863D9CD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Domain.Core", "MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj", "{77165297-2982-461E-AD8B-A76AE5FEED21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Domain.Core", "MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj", "{77165297-2982-461E-AD8B-A76AE5FEED21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Infra.Bus", "MicroserviceRabbitMq.Infra.Bus\MicroserviceRabbitMq.Infra.Bus.csproj", "{50D7A8A5-DA01-4DF2-8851-D383AB579891}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Infra.Bus", "MicroserviceRabbitMq.Infra.Bus\MicroserviceRabbitMq.Infra.Bus.csproj", "{50D7A8A5-DA01-4DF2-8851-D383AB579891}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Infra.Ioc", "MicroserviceRabbitMq.Infra.Ioc\MicroserviceRabbitMq.Infra.Ioc.csproj", "{41D3F501-3959-4A34-B9B2-FBC61A14DF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Infra.Ioc", "MicroserviceRabbitMq.Infra.Ioc\MicroserviceRabbitMq.Infra.Ioc.csproj", "{41D3F501-3959-4A34-B9B2-FBC61A14DF6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banking", "Banking", "{7753091C-A485-42FB-B250-A24CF16DE728}"
 EndProject
@@ -29,13 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{895E9EE9-C8FC-4A2B-879C-50F63FEADFB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Banking.Api", "MicroserviceRabbitMq.Banking.Api\MicroserviceRabbitMq.Banking.Api.csproj", "{EC11F090-EF4D-4A10-AA88-5DE724E59A34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.banking.Application", "MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.banking.Application.csproj", "{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.banking.Application", "MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.banking.Application.csproj", "{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Data", "MicroserviceRabbitMq.Banking.Data\MicroserviceRabbitMq.Banking.Data.csproj", "{EB264000-6B70-4DEE-B1AF-C23D6793C3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Banking.Data", "MicroserviceRabbitMq.Banking.Data\MicroserviceRabbitMq.Banking.Data.csproj", "{EB264000-6B70-4DEE-B1AF-C23D6793C3BB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Banking.Domain", "MicroserviceRabbitMq.Banking.Domain\MicroserviceRabbitMq.Banking.Domain.csproj", "{BFC627FE-4F0C-4299-A1EB-8A7C64D90807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Domain", "MicroserviceRabbitMq.Banking.Domain\MicroserviceRabbitMq.Banking.Domain.csproj", "{BFC627FE-4F0C-4299-A1EB-8A7C64D90807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,18 +81,6 @@ Global
 		{41D3F501-3959-4A34-B9B2-FBC61A14DF6C}.Release|iPhone.Build.0 = Release|Any CPU
 		{41D3F501-3959-4A34-B9B2-FBC61A14DF6C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{41D3F501-3959-4A34-B9B2-FBC61A14DF6C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|iPhone.Build.0 = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -144,7 +130,6 @@ Global
 		{AD3B64AE-7D82-40CF-B011-357CCE1A0AF1} = {7753091C-A485-42FB-B250-A24CF16DE728}
 		{A30BE78E-7141-41D4-A5FC-AE472CCA2408} = {7753091C-A485-42FB-B250-A24CF16DE728}
 		{895E9EE9-C8FC-4A2B-879C-50F63FEADFB9} = {7753091C-A485-42FB-B250-A24CF16DE728}
-		{EC11F090-EF4D-4A10-AA88-5DE724E59A34} = {998446C0-B827-482F-A729-79DFE2D01A57}
 		{530E9BC5-AF7C-4A0A-9713-D793F9904CB4} = {A30BE78E-7141-41D4-A5FC-AE472CCA2408}
 		{EB264000-6B70-4DEE-B1AF-C23D6793C3BB} = {895E9EE9-C8FC-4A2B-879C-50F63FEADFB9}
 		{BFC627FE-4F0C-4299-A1EB-8A7C64D90807} = {AD3B64AE-7D82-40CF-B011-357CCE1A0AF1}
