@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.banking.Application.csproj" />
+    <ProjectReference Include="..\MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.Banking.Application.csproj" />
     <ProjectReference Include="..\MicroserviceRabbitMq.Banking.Data\MicroserviceRabbitMq.Banking.Data.csproj" />
     <ProjectReference Include="..\MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj" />
     <ProjectReference Include="..\MicroserviceRabbitMq.Infra.Bus\MicroserviceRabbitMq.Infra.Bus.csproj" />

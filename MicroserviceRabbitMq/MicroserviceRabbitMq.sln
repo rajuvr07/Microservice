@@ -29,13 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{895E9EE9-C8FC-4A2B-879C-50F63FEADFB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.banking.Application", "MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.banking.Application.csproj", "{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Application", "MicroserviceRabbitMq.banking.Application\MicroserviceRabbitMq.Banking.Application.csproj", "{530E9BC5-AF7C-4A0A-9713-D793F9904CB4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Data", "MicroserviceRabbitMq.Banking.Data\MicroserviceRabbitMq.Banking.Data.csproj", "{EB264000-6B70-4DEE-B1AF-C23D6793C3BB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Domain", "MicroserviceRabbitMq.Banking.Domain\MicroserviceRabbitMq.Banking.Domain.csproj", "{BFC627FE-4F0C-4299-A1EB-8A7C64D90807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Banking.Api", "MicroserviceRabbitMq.Banking.Api\MicroserviceRabbitMq.Banking.Api.csproj", "{0A9E03A5-E238-48A8-A165-E0EDF8CC0EA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Banking.Api", "MicroserviceRabbitMq.Banking.Api\MicroserviceRabbitMq.Banking.Api.csproj", "{0A9E03A5-E238-48A8-A165-E0EDF8CC0EA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
