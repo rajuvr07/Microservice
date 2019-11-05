@@ -7,6 +7,7 @@ namespace MicroserviceRabbitMq.Banking.Application.Interfaces
 {
     public interface IAccountService
     {
+        //TO get accounts
         IEnumerable<Account> GetAccounts();
     }
 }
