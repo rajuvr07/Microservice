@@ -31,7 +31,7 @@ namespace MicroserviceRabbitMq.Infra.Bus
             return _mediator.Send(command);
         }
 
-        public void Publish<T>(Task @event) where T : Event
+        public void Publish<T>(T @event) where T : Event
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (var connection = factory.CreateConnection())

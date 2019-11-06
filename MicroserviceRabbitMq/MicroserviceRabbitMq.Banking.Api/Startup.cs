@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using MediatR;
 using MicroserviceRabbitMq.Banking.Data.Context;
+using MicroserviceRabbitMq.Banking.Domain.CommandHandlers;
 using MicroserviceRabbitMq.Infra.Ioc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,7 +45,7 @@ namespace MicroserviceRabbitMq.Banking.Api
                 Title = "banking Microservice",
                 Version = "V1"
             }));
-
+            //services.AddMediatR(typeof(TransferCommandHandler).GetTypeInfo().Assembly);
             services.AddMediatR(typeof(Startup));
             RegisterServices(services);
         }
