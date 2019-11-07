@@ -17,13 +17,4 @@
     <ProjectReference Include="..\MicroserviceRabbitMq.Transfer.Data\MicroserviceRabbitMq.Transfer.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="MicroserviceRabbitMq.Transfer.Application">
-      <HintPath>..\MicroserviceRabbitMq.Transfer.Application\bin\Debug\netcoreapp2.2\MicroserviceRabbitMq.Transfer.Application.dll</HintPath>
-    </Reference>
-    <Reference Include="MicroserviceRabbitMq.Transfer.Data">
-      <HintPath>..\MicroserviceRabbitMq.Transfer.Data\bin\Debug\netcoreapp2.2\MicroserviceRabbitMq.Transfer.Data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
