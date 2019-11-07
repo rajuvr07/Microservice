@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using MicroserviceRabbitMq.Domain.Core.Bus;
 using MicroserviceRabbitMq.Infra.Ioc;
 using MicroserviceRabbitMq.Transfer.Data.Context;
+using MicroserviceRabbitMq.Transfer.Domain.EventHandlers;
+using MicroserviceRabbitMq.Transfer.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -71,6 +74,13 @@ namespace MicroserviceRabbitMq.Transfer.Api
 
             });
             app.UseMvc();
+            ConfigureEventBus(app);
+        }
+
+        private  void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<TransferCreatedEvent, TransferEventHandler>();
         }
     }
 }

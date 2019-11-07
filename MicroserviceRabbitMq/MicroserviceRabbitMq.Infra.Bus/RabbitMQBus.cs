@@ -2,6 +2,7 @@
 using MicroserviceRabbitMq.Domain.Core.Bus;
 using MicroserviceRabbitMq.Domain.Core.Commands;
 using MicroserviceRabbitMq.Domain.Core.Events;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -18,12 +19,14 @@ namespace MicroserviceRabbitMq.Infra.Bus
         private readonly IMediator _mediator;
         private readonly Dictionary<string, List<Type>> _handlers;
         private readonly List<Type> _eventTypes;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        public RabbitMQBus(IMediator mediator)
+        public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {
             _mediator = mediator;
             _handlers = new Dictionary<string, List<Type>>();
             _eventTypes = new List<Type>();
+            _serviceScopeFactory = serviceScopeFactory;
 
         }
         public Task SendCommand<T>(T command) where T : Command
@@ -112,17 +115,21 @@ namespace MicroserviceRabbitMq.Infra.Bus
         {
            if(_handlers.ContainsKey(eventName))
             {
-                var subscriptions = _handlers[eventName];
-                foreach (var subscription in subscriptions)
+                using (var scope=_serviceScopeFactory.CreateScope())
                 {
-                    var handler = Activator.CreateInstance(subscription);
-                    if (handler == null) continue;
-                    var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
-                    var @event = JsonConvert.DeserializeObject(message, eventType);
-                    var concreateType = typeof(IEventHandler<>).MakeGenericType(eventType);
+                    var subscriptions = _handlers[eventName];
+                    foreach (var subscription in subscriptions)
+                    {
+                        var handler = scope.ServiceProvider.GetService(subscription);
+                        if (handler == null) continue;
+                        var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
+                        var @event = JsonConvert.DeserializeObject(message, eventType);
+                        var concreateType = typeof(IEventHandler<>).MakeGenericType(eventType);
 
-                    await (Task)concreateType.GetMethod("Handle").Invoke(handler, new object[] { @event });
+                        await (Task)concreateType.GetMethod("Handle").Invoke(handler, new object[] { @event });
+                    }
                 }
+               
             }
         }
     }

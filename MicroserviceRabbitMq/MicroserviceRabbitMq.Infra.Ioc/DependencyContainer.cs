@@ -12,6 +12,8 @@ using MicroserviceRabbitMq.Transfer.Application.Interfaces;
 using MicroserviceRabbitMq.Transfer.Application.Services;
 using MicroserviceRabbitMq.Transfer.Data.Context;
 using MicroserviceRabbitMq.Transfer.Data.Repository;
+using MicroserviceRabbitMq.Transfer.Domain.EventHandlers;
+using MicroserviceRabbitMq.Transfer.Domain.Events;
 using MicroserviceRabbitMq.Transfer.Domain.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -26,7 +28,17 @@ namespace MicroserviceRabbitMq.Infra.Ioc
         public static void RegisterServices(IServiceCollection services)
         {
             //Domain Bus
-            services.AddTransient<IEventBus, RabbitMQBus>();
+            services.AddSingleton<IEventBus, RabbitMQBus>(sp =>
+            {
+                var scopeFactory = sp.GetRequiredService<IServiceScopeFactory>();
+                return new RabbitMQBus(sp.GetRequiredService<IMediator>(),scopeFactory);
+            });
+
+            //subcriptions
+            services.AddTransient<TransferEventHandler>();
+
+            //Domain Events
+            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
 
             //Domain banking Commands
             services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
