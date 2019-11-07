@@ -13,6 +13,17 @@
     <ProjectReference Include="..\MicroserviceRabbitMq.Banking.Data\MicroserviceRabbitMq.Banking.Data.csproj" />
     <ProjectReference Include="..\MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj" />
     <ProjectReference Include="..\MicroserviceRabbitMq.Infra.Bus\MicroserviceRabbitMq.Infra.Bus.csproj" />
+    <ProjectReference Include="..\MicroserviceRabbitMq.Transfer.Application\MicroserviceRabbitMq.Transfer.Application.csproj" />
+    <ProjectReference Include="..\MicroserviceRabbitMq.Transfer.Data\MicroserviceRabbitMq.Transfer.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MicroserviceRabbitMq.Transfer.Application">
+      <HintPath>..\MicroserviceRabbitMq.Transfer.Application\bin\Debug\netcoreapp2.2\MicroserviceRabbitMq.Transfer.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroserviceRabbitMq.Transfer.Data">
+      <HintPath>..\MicroserviceRabbitMq.Transfer.Data\bin\Debug\netcoreapp2.2\MicroserviceRabbitMq.Transfer.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

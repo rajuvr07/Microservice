@@ -42,7 +42,7 @@ namespace MicroserviceRabbitMq.Banking.Api
             services.AddSwaggerGen(c =>
             c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
             {
-                Title = "banking Microservice",
+                Title = "Banking Microservice",
                 Version = "V1"
             }));
             //services.AddMediatR(typeof(TransferCommandHandler).GetTypeInfo().Assembly);

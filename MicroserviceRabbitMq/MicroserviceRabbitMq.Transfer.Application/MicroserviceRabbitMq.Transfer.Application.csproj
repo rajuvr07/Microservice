@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroserviceRabbitMq.Domain.Core\MicroserviceRabbitMq.Domain.Core.csproj" />
+    <ProjectReference Include="..\MicroserviceRabbitMq.Transfer.Domain\MicroserviceRabbitMq.Transfer.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
