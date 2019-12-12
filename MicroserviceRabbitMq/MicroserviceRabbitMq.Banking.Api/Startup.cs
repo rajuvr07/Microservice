@@ -68,7 +68,7 @@ namespace MicroserviceRabbitMq.Banking.Api
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

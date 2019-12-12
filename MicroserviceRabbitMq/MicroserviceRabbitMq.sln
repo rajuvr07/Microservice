@@ -47,13 +47,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E89C3813-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FDFEE963-1B8F-45E7-B469-F1C867D76E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Transfer.Api", "MicroserviceRabbitMq.Transfer.Api\MicroserviceRabbitMq.Transfer.Api.csproj", "{EDFB2312-16BE-4849-A9DD-FEBE04A2CF32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Transfer.Api", "MicroserviceRabbitMq.Transfer.Api\MicroserviceRabbitMq.Transfer.Api.csproj", "{EDFB2312-16BE-4849-A9DD-FEBE04A2CF32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Transfer.Application", "MicroserviceRabbitMq.Transfer.Application\MicroserviceRabbitMq.Transfer.Application.csproj", "{C9A0D216-7B0B-493E-8E7A-C14AB616F030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Transfer.Application", "MicroserviceRabbitMq.Transfer.Application\MicroserviceRabbitMq.Transfer.Application.csproj", "{C9A0D216-7B0B-493E-8E7A-C14AB616F030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Transfer.Data", "MicroserviceRabbitMq.Transfer.Data\MicroserviceRabbitMq.Transfer.Data.csproj", "{D1F798DC-2D23-47C0-BAB9-C5648E73611E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Transfer.Data", "MicroserviceRabbitMq.Transfer.Data\MicroserviceRabbitMq.Transfer.Data.csproj", "{D1F798DC-2D23-47C0-BAB9-C5648E73611E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.Transfer.Domain", "MicroserviceRabbitMq.Transfer.Domain\MicroserviceRabbitMq.Transfer.Domain.csproj", "{E58A66E2-BC38-4629-9F18-1DA8E7087AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceRabbitMq.Transfer.Domain", "MicroserviceRabbitMq.Transfer.Domain\MicroserviceRabbitMq.Transfer.Domain.csproj", "{E58A66E2-BC38-4629-9F18-1DA8E7087AD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceRabbitMq.MVC", "MicroserviceRabbitMq.MVC\MicroserviceRabbitMq.MVC.csproj", "{965384F7-CF87-45E1-B7ED-805E7E1172E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +199,18 @@ Global
 		{E58A66E2-BC38-4629-9F18-1DA8E7087AD1}.Release|iPhone.Build.0 = Release|Any CPU
 		{E58A66E2-BC38-4629-9F18-1DA8E7087AD1}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E58A66E2-BC38-4629-9F18-1DA8E7087AD1}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|iPhone.Build.0 = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -223,6 +237,7 @@ Global
 		{C9A0D216-7B0B-493E-8E7A-C14AB616F030} = {18C79CCA-75EC-4A85-A8C5-6FAD143FBA69}
 		{D1F798DC-2D23-47C0-BAB9-C5648E73611E} = {E89C3813-E828-4B4F-816D-AF62B1C466E9}
 		{E58A66E2-BC38-4629-9F18-1DA8E7087AD1} = {FDFEE963-1B8F-45E7-B469-F1C867D76E9F}
+		{965384F7-CF87-45E1-B7ED-805E7E1172E3} = {72409DA0-7CB2-47B3-B188-570F863D9CD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265A3534-B192-4BCD-8039-63EC11F50D57}

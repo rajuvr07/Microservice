@@ -5,11 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MicroserviceRabbitMq.MVC.Models;
+using MicroserviceRabbitMq.MVC.Services;
+using MicroserviceRabbitMq.MVC.Models.DTO;
 
 namespace MicroserviceRabbitMq.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ITransferService _transferService;
+        public HomeController(ITransferService transferService)
+        {
+            _transferService = transferService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -24,6 +31,18 @@ namespace MicroserviceRabbitMq.MVC.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [HttpPost]
+        public async Task<IActionResult> Transfer(TransferViewModel model)
+        {
+            TransferDto transferDto = new TransferDto
+            {
+                FromAccount = model.FromAccount,
+                ToAccount=model.ToAccount,
+                TransferAmount=model.TransferAmount
+            };
+            await _transferService.Transfer(transferDto);
+            return View("Index");
         }
     }
 }

@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace MicroserviceRabbitMq.MVC.Models.DTO
 {
-    public class TransferDTO
+    public class TransferDto
     {
+        public int FromAccount { get; set; }
+        public int ToAccount { get; set; }
+        public decimal TransferAmount { get; set; }
     }
 }
